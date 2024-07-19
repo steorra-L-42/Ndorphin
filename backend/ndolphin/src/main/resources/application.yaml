@@ -80,3 +80,5 @@ jwt:
 logging:
   level:
     org.springframework.security: DEBUG
+    org.hibernate.SQL: debug
+#    org.hibernate.type.descriptor.sql: trace
