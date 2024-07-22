@@ -1,4 +1,14 @@
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  profiles:
+    include: private
   devtools:
     livereload:
       enabled:false
