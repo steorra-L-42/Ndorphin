@@ -51,7 +51,7 @@ spring:
           starttls:
             enable: true
 
-  # KAKAO OAUTH2 설정
+  # OAUTH2 설정
   security:
     oauth2:
       client:
@@ -69,6 +69,13 @@ spring:
             redirect-uri: "http://localhost:8080/oauth2/callback/naver"
             authorization-grant-type: authorization_code
             scope: email
+          google:
+            client-id: 702397908111-l29ht012g25isqhvou2ev4i7r9im9aa9.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: "http://localhost:8080/oauth2/callback/google"
+            scope:
+              - email
+              - profile
         provider:
           kakao:
             authorization-uri: https://kauth.kakao.com/oauth/authorize
