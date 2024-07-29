@@ -32,13 +32,20 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    defer-datasource-initialization: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
         use_sql_comments: true
         show_sql: true
+        # 생성, 업데이트 시간 자동 설정
+        jdbc:
+          time_zone: UTC
 
+  sql:
+    init:
+      mode: always
   # 이메일 전송 SMTP
   mail:
     host: smtp.gmail.com
