@@ -43,9 +43,9 @@ spring:
         jdbc:
           time_zone: UTC
 
-#  sql:
-#    init:
-#      mode: always
+  sql:
+    init:
+      mode: always
   # 이메일 전송 SMTP
   mail:
     host: smtp.gmail.com
