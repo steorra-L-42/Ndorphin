@@ -1,7 +1,7 @@
 app:
   baseUrl: "http://ec2-54-180-146-64.ap-northeast-2.compute.amazonaws.com"
-  #  baseUrl: "http://54.180.146.64"
-#  baseUrl: "http://localhost"
+  # baseUrl: "http://54.180.146.64"
+  # baseUrl: "http://localhost"
 
 spring:
   servlet:
@@ -113,3 +113,4 @@ logging:
     org.hibernate.SQL: debug
 #
 #    org.hibernate.type.descriptor.sql: trace
+
