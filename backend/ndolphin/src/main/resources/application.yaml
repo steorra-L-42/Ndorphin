@@ -1,13 +1,7 @@
 app:
-<<<<<<< HEAD
-#  baseUrl: "http://ec2-54-180-146-64.ap-northeast-2.compute.amazonaws.com"
-#   baseUrl: "http://54.180.146.64"
-   baseUrl: "http://localhost"
-=======
   baseUrl: "http://ec2-54-180-146-64.ap-northeast-2.compute.amazonaws.com"
   # baseUrl: "http://54.180.146.64"
-#  baseUrl: "http://localhost"
->>>>>>> 17aa47fae16610cdc823c8b17814539e75e571c2
+  # baseUrl: "http://localhost"
 
 spring:
   servlet:
@@ -30,9 +24,9 @@ spring:
     url: jdbc:mysql://54.180.146.64:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
     username: root
     password: 1234
-#    url: jdbc:mysql://localhost:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
-#    username: ssafy
-#    password: ssafy
+    #    url: jdbc:mysql://localhost:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
+    #    username: ssafy
+    #    password: ssafy
     hikari:
       pool-name: hikari-pool
       maximum-pool-size: 50
