@@ -1,18 +1,13 @@
 app:
   baseUrl: "http://ec2-54-180-146-64.ap-northeast-2.compute.amazonaws.com"
-  # baseUrl: "http://54.180.146.64"
-  # baseUrl: "http://localhost"
-
+#   baseUrl: "http://localhost"
+#   baseUrl: "http://54.180.146.64"
 spring:
   servlet:
     multipart:
       enabled: true
       max-file-size: 10MB
       max-request-size: 10MB
-  mvc:
-    view:
-      prefix: /WEB-INF/views/
-      suffix: .jsp
   profiles:
     include: private
   devtools:
@@ -95,10 +90,11 @@ logging:
   level:
     org.springframework.security: DEBUG
     org.hibernate.SQL: debug
-#
+
 #    org.hibernate.type.descriptor.sql: trace
 openai:
   api-key: ${OPENAI_SECRET}
   model: gpt-3.5-turbo
   api-url: https://api.openai.com/v1/chat/completions
   timeout: 3000  # Optional timeout setting for API requests
+
