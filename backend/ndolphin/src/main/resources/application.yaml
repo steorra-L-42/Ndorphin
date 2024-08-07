@@ -90,10 +90,11 @@ logging:
   level:
     org.springframework.security: DEBUG
     org.hibernate.SQL: debug
-#
+
 #    org.hibernate.type.descriptor.sql: trace
 openai:
   api-key: ${OPENAI_SECRET}
   model: gpt-3.5-turbo
   api-url: https://api.openai.com/v1/chat/completions
   timeout: 3000  # Optional timeout setting for API requests
+
