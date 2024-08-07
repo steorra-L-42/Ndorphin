@@ -22,11 +22,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://54.180.146.64:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
-    username: ssafy207
-    password: ssafy
-    #    url: jdbc:mysql://localhost:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
-    #    username: ssafy
-    #    password: ssafy
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_SECRET}
     hikari:
       pool-name: hikari-pool
       maximum-pool-size: 50
@@ -51,43 +48,27 @@ spring:
         jdbc:
           time_zone: Asia/Seoul
 
-  #  sql:
-  #    init:
-  #      mode: always
-  # 이메일 전송 SMTP
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: ndolphin207@gmail.com
-    password: fobp vxrr yaiv veqo
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-
   # OAUTH2 설정
   security:
     oauth2:
       client:
         registration:
           kakao:
-            client-id: e6ff767d2e5031bca0b656aafb9febe9
-            client-secret: 2WEEEzewAZflGwr14CqvfAoy6dGP7mn9
+            client-id: ${KAKAO_ID}
+            client-secret: ${KAKAO_SECRET}
             redirect-uri: "${app.baseUrl}:8080/oauth2/callback/kakao"
             authorization-grant-type: authorization_code
             client-authentication-method: client_secret_post
             scope: account_email
           naver:
-            client-id: Y9J0WjXpfsZSP_7cnM5B
-            client-secret: gRJPO9Y0u1
+            client-id: ${NAVER_ID}
+            client-secret: ${NAVER_SECRET}
             redirect-uri: "${app.baseUrl}:8080/oauth2/callback/naver"
             authorization-grant-type: authorization_code
             scope: email
           google:
-            client-id: 702397908111-l29ht012g25isqhvou2ev4i7r9im9aa9.apps.googleusercontent.com
-            client-secret: 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
+            client-id: ${GOOGLE_ID}
+            client-secret: ${GOOGLE_SECRET}
             redirect-uri: "${app.baseUrl}:8080/oauth2/callback/google"
             scope:
               - email
@@ -116,3 +97,8 @@ logging:
     org.hibernate.SQL: debug
 #
 #    org.hibernate.type.descriptor.sql: trace
+openai:
+  api-key: ${OPENAI_SECRET}
+  model: gpt-3.5-turbo
+  api-url: https://api.openai.com/v1/chat/completions
+  timeout: 3000  # Optional timeout setting for API requests
