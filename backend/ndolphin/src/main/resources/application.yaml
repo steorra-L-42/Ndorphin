@@ -3,6 +3,8 @@ app:
 #   baseUrl: "http://localhost"
 #   baseUrl: "http://54.180.146.64"
 spring:
+  config:
+    import: optional:file:.env[.properties]
   servlet:
     multipart:
       enabled: true
