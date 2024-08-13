@@ -1,7 +1,7 @@
 app:
   baseUrl: "http://i11d207.p.ssafy.io"
 #  baseUrl: "http://ec2-54-180-146-64.ap-northeast-2.compute.amazonaws.com"
-#  baseUrl: "http://localhost"
+#  baseUrl: "http://localhost:8080"
 spring:
   jackson:
     time-zone: Asia/Seoul
