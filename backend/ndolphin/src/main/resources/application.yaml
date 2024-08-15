@@ -91,10 +91,10 @@ jwt:
 #  header: Authorization
 #  token-validity-in-seconds: 86400
 
-#logging:
-#  level:
-#    org.springframework.security: DEBUG
-#    org.hibernate.SQL: debug
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: debug
 
 #    org.hibernate.type.descriptor.sql: trace
 openai:
