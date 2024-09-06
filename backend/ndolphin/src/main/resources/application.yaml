@@ -20,7 +20,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${BASE_URL}:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
+    url: jdbc:mysql://mysql/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
     username: ${MYSQL_USERNAME}
     password: ${MYSQL_SECRET}
     hikari:
