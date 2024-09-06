@@ -1,5 +1,5 @@
 app:
-  baseUrl: "http://i11d207.p.ssafy.io"
+  baseUrl: "http://${BASE_URL}:8080"
 #  baseUrl: "http://ec2-54-180-146-64.ap-northeast-2.compute.amazonaws.com"
 #  baseUrl: "http://localhost:8080"
 spring:
@@ -20,8 +20,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://54.180.146.64:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
-#    url: jdbc:mysql://localhost:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
+    url: jdbc:mysql://${BASE_URL}:3306/ndolphin?serverTimezone=Asia/Seoul&useUniCode=yes&characterEncoding=UTF-8
     username: ${MYSQL_USERNAME}
     password: ${MYSQL_SECRET}
     hikari:
@@ -36,7 +35,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     defer-datasource-initialization: true
     properties:
       hibernate:
